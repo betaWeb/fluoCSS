@@ -1,0 +1,27 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    border: 1px solid $main-color;
+    border-radius: $radius;
+    @include doubleShadow;
+}
+
+.card + .card {
+    margin-top: space(1);
+}
+
+.card > * {
+    padding: space(1);
+}
+
+.card .card-header {
+    border-bottom: 1px solid $main-color;
+}
+.card .card-title {
+    font-weight: bold;
+}
+.card-footer {
+    text-align: right;
+    white-space: normal;
+}
