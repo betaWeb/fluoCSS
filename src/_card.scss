@@ -2,9 +2,20 @@
     display: flex;
     flex-direction: column;
     width: 480px;
-    border: 1px solid $main-color;
     border-radius: $radius;
+    border: 1px solid $main-color;
     @include doubleShadow;
+}
+
+@each $type, $color in $types {
+	.card.card-#{$type} {
+    border: 1px solid $color;
+		@include doubleShadow($c: $color);
+		
+		.card-header {
+			border-bottom-color: $color;
+		}
+	}
 }
 
 .card + .card {
@@ -19,7 +30,7 @@
     border-bottom: 1px solid $main-color;
 }
 .card .card-title {
-    font-weight: bold;
+		font-weight: bold;
 }
 .card-footer {
     text-align: right;

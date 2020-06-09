@@ -8,3 +8,18 @@ $white-color: #fff;
 $black-color: #000;
 $main-color: #2e1fb6;
 $dark-color: darken($main-color, 38%);
+$success-color: #1fb640;
+$warning-color: #ec8e13;
+$danger-color: #b6361f;
+$info-color: #12a7ec;
+
+// Lists
+// -----
+$types: (
+	'primary': $main-color,
+	'light': $white-color,
+	'success': $success-color,
+	'warning': $warning-color,
+	'danger': $danger-color,
+	'info': $info-color
+)

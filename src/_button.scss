@@ -3,24 +3,15 @@
     padding: space(.334) space(1);
     text-transform: uppercase;
     font-size: 90%;
-    border: none;
+		border: none;
+		
+		&:focus {
+			outline: none;
+		}
 }
 
 .btn + .btn {
     margin-left: space(.5);
-}
-
-.btn.btn-primary {
-    border: 1px solid $main-color;
-    background-color: rgba($main-color, .2);
-    border-radius: $radius;
-    transition: box-shadow .1s, background-color .2s;
-    @include doubleShadow($b: 2px, $r: 2px);
-
-    &:hover, &:focus {
-        @include doubleShadow($b: 3px, $r: 3px, $o: .5);
-        background-color: rgba($main-color, .1667);
-    }
 }
 
 .btn.btn-default {
@@ -30,4 +21,19 @@
     &:hover {
         opacity: .8;
     }
+}
+
+@each $type, $color in $types {
+.btn.btn-#{$type} {
+    border: 1px solid $color;
+    background-color: rgba($color, .2);
+    border-radius: $radius;
+    transition: box-shadow .1s, darken($color, 38%);
+    @include doubleShadow($b: 2px, $r: 2px, $c: $color);
+
+    &:hover, &:focus {
+        @include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
+        background-color: rgba($color, .1667);
+		}
+	}
 }
