@@ -24,20 +24,48 @@
 }
 
 @each $type, $color in $types {
-.btn.btn-#{$type} {
-    border: 1px solid $color;
-    border-radius: $radius;
-    background-color: rgba($color, .2);
-    @include doubleShadow($b: 2px, $r: 2px, $c: $color);
-    // transition: box-shadow .1s, darken($color, 38%);
+	.btn.btn-#{$type} {
+		border: 1px solid $color;
+		border-radius: $radius;
+		background-color: rgba($color, .2);
+		@include doubleShadow($b: 2px, $r: 2px, $c: $color);
+		// transition: box-shadow .1s, darken($color, 38%);
 
-    &:hover, &:focus {
-			animation: blink-#{$type};
+		&:hover {
+			animation: blink-#{$type} .8s both;
+		}
+		&:focus {
+			@include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
+			background-color: rgba($color, .1667);
 		}
 	}
 
 	@keyframes blink-#{$type} {
 		0% {
+			background-color: rgba($color, .2);
+			@include doubleShadow($b: 2px, $r: 2px, $c: $color);
+		}
+		10% {
+			@include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
+			background-color: rgba($color, .1667);
+		}
+		22% {
+			background-color: rgba($color, .2);
+			@include doubleShadow($b: 2px, $r: 2px, $c: $color);
+		}
+		26% {
+			@include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
+			background-color: rgba($color, .1667);
+		}
+		32% {
+			background-color: rgba($color, .2);
+			@include doubleShadow($b: 2px, $r: 2px, $c: $color);
+		}
+		35% {
+			@include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
+			background-color: rgba($color, .1667);
+		}
+		40% {
 			background-color: rgba($color, .2);
 			@include doubleShadow($b: 2px, $r: 2px, $c: $color);
 		}
