@@ -1,9 +1,13 @@
+
 .btn {
     display: inline-block;
     padding: space(.334) space(1);
     text-transform: uppercase;
     font-size: 90%;
 		border: none;
+		color: inherit;
+		cursor: pointer;
+		background: transparent;
 		
 		&:focus {
 			outline: none;
@@ -27,16 +31,15 @@
 	.btn.btn-#{$type} {
 		border: 1px solid $color;
 		border-radius: $radius;
-		background-color: rgba($color, .2);
+		background-color: rgba($color, .334);
 		@include doubleShadow($b: 2px, $r: 2px, $c: $color);
-		// transition: box-shadow .1s, darken($color, 38%);
 
-		&:hover {
-			animation: blink-#{$type} .8s both;
-		}
 		&:focus {
 			@include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
-			background-color: rgba($color, .1667);
+			background-color: rgba($color, .2);
+		}
+		&:hover {
+			animation: blink-#{$type} 1s both;
 		}
 	}
 

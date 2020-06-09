@@ -22,6 +22,7 @@ $purple-color: #9512ec;
 $types: (
 	'primary': $main-color,
 	'light': $white-color,
+	'dark': $dark-color,
 	'success': $success-color,
 	'warning': $warning-color,
 	'danger': $danger-color,
@@ -29,4 +30,19 @@ $types: (
 	'pink': $pink-color,
 	'yellow': $yellow-color,
 	'purple': $purple-color
-)
+);
+
+// CSS variables
+// -------------
+:root {
+	--fluo-main-color: #{$main-color};
+	--fluo-white-color: #{$white-color};
+	--fluo-dark-color: #{$dark-color};
+	--fluo-success-color: #{$success-color};
+	--fluo-warning-color: #{$warning-color};
+	--fluo-danger-color: #{$danger-color};
+	--fluo-info-color: #{$info-color};
+	--fluo-pink-color: #{$pink-color};
+	--fluo-yellow-color: #{$yellow-color};
+	--fluo-purple-color: #{$purple-color};
+}

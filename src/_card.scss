@@ -9,7 +9,8 @@
 
 @each $type, $color in $types {
 	.card.card-#{$type} {
-    border: 1px solid $color;
+		border: 1px solid $color;
+		background-color: rgba($color, .1);
 		@include doubleShadow($c: $color);
 		
 		.card-header {
@@ -32,7 +33,10 @@
 .card .card-title {
 		font-weight: bold;
 }
-.card-footer {
+.card .card-body {
+	font-weight: lighter;
+}
+.card .card-footer {
     text-align: right;
     white-space: normal;
 }

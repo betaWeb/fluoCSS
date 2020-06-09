@@ -1,28 +1,9 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @import 'variables';
-@import 'reset';
 @import 'mixins';
+@import 'typography';
 @import 'button';
 @import 'card';
-
-body {
-    background-color: $dark-color;
-    color: #fff;
-    font-family: monospace, sans-serif;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: space(2) 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-@include up(800) {
-	.container {
-		padding-left: calc(50% - #{$container-width / 2});
-		padding-right: calc(50% - #{$container-width / 2});
-	}
-}
