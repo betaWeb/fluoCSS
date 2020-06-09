@@ -26,14 +26,24 @@
 @each $type, $color in $types {
 .btn.btn-#{$type} {
     border: 1px solid $color;
-    background-color: rgba($color, .2);
     border-radius: $radius;
-    transition: box-shadow .1s, darken($color, 38%);
+    background-color: rgba($color, .2);
     @include doubleShadow($b: 2px, $r: 2px, $c: $color);
+    // transition: box-shadow .1s, darken($color, 38%);
 
     &:hover, &:focus {
-        @include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
-        background-color: rgba($color, .1667);
+			animation: blink-#{$type};
+		}
+	}
+
+	@keyframes blink-#{$type} {
+		0% {
+			background-color: rgba($color, .2);
+			@include doubleShadow($b: 2px, $r: 2px, $c: $color);
+		}
+		100% {
+			@include doubleShadow($b: 4px, $r: 4px, $o: .5, $c: $color);
+			background-color: rgba($color, .1667);
 		}
 	}
 }

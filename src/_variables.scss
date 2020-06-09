@@ -1,6 +1,7 @@
 $container-width: 900px;
 $space: 16px;
 $radius: 5px;
+$default-shadow-opacity: .4;
 
 // Colors
 // ------
@@ -12,6 +13,9 @@ $success-color: #1fb640;
 $warning-color: #ec8e13;
 $danger-color: #b6361f;
 $info-color: #12a7ec;
+$pink-color: #ec12a3;
+$yellow-color: #ece812;
+$purple-color: #9512ec;
 
 // Lists
 // -----
@@ -21,5 +25,8 @@ $types: (
 	'success': $success-color,
 	'warning': $warning-color,
 	'danger': $danger-color,
-	'info': $info-color
+	'info': $info-color,
+	'pink': $pink-color,
+	'yellow': $yellow-color,
+	'purple': $purple-color
 )

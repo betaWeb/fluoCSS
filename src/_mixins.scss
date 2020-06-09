@@ -56,7 +56,7 @@
     }
   }
 }
-@mixin doubleShadow($x: 0, $y: 0, $b: 5px, $r: 5px, $c: $main-color, $o: .334) {
+@mixin doubleShadow($x: 0, $y: 0, $b: 5px, $r: 5px, $c: $main-color, $o: $default-shadow-opacity) {
   box-shadow: 
     $x $y $b $r rgba($c, $o),
     inset $x $y $b $r rgba($c, $o);
